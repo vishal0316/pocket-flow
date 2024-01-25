@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Unbounded", sans-serif;
+}
+
+:root {
+  --purple: #7562ab;
+  --black: #2a2a2a;
+  --white: #fff;
+  --yellow: #fbe20c;
+  --grey: #d4d4d4;
+  --pink: #ff84ca;
+  --blue: #9fd7fa;
+  --red: #f15555;
+  --green: #88fe77;
+  scroll-behavior: smooth;
+}
