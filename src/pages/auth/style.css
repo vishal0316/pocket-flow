@@ -18,6 +18,28 @@ body {
   scroll-behavior: smooth;
 }
 
+.logo {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+  padding: 4rem 3rem;
+  margin-top: 2rem;
+  background-color: var(--yellow);
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.logo-svg {
+  max-width: 14rem;
+  position: absolute;
+  top: 53px;
+  right: 37rem;
+  z-index: 2;
+}
+
 .login-page {
   width: 100vw;
   height: calc(100vh);
@@ -40,7 +62,7 @@ body {
 /* GOOGLE BUTTOn */
 .login-with-google-btn {
   cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease background-color 0.3s, box-shadow 0.3s;
   padding: 5px 16px 12px 42px;
   border: none;
   border-radius: 3px;

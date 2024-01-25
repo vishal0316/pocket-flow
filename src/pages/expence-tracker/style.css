@@ -1,0 +1,144 @@
+:root {
+  --purple: #7562ab;
+  --black: #2a2a2a;
+  --white: #fff;
+  --yellow: #fbe20c;
+  --grey: #d4d4d4;
+  --pink: #ff84ca;
+  --blue: #9fd7fa;
+  --red: #f15555;
+  --green: #88fe77;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--red);
+}
+
+.expense-tracker {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.balance,
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--yellow);
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary .card {
+  flex: 1;
+}
+
+.balance h2,
+.income p,
+.expenses p {
+  margin: 0;
+}
+
+.expense-tracker h1 {
+  font-size: 40px;
+}
+
+.expense-tracker button {
+  margin-left: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 200px;
+}
+
+.profile-photo {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.sign-out-button {
+  border: none;
+  margin-top: 50px;
+  width: 150px;
+  background: #3498db;
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.sign-out-button:hover {
+  background: #3cb0fd;
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.transactions {
+  margin-left: 430px;
+  margin-top: 20px;
+  padding-left: 10px;
+  width: 600px;
+  height: 400px;
+  overflow: auto;
+  border: 3px solid #023047;
+}
+
+.add-transaction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.add-transaction input,
+.add-transaction button,
+.add-transaction label {
+  margin: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-transaction input[type="text"],
+.add-transaction input[type="number"] {
+  width: 200px;
+}
+
+.add-transaction label {
+  margin-right: 5px;
+}
+
+.add-transaction button {
+  background-color: var(--purple);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.add-transaction button:hover {
+  background-color: var(--pink);
+}
