@@ -1,5 +1,18 @@
 import "./style.css";
+
+import { useAddTransaction } from "../../hooks/useAddTransaction";
+
 export const ExpenceTracker = () => {
+  const { addTransaction } = useAddTransaction();
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    addTransaction({
+      description: "Haircut",
+      transactionAmount: 22,
+      transactionType: "expense",
+    });
+  };
   return (
     <>
       <div className="expense-tracker">
@@ -8,21 +21,21 @@ export const ExpenceTracker = () => {
           <div className="cards">
             <div className="balance card">
               <h3>Your Balance</h3>
-              <h2>$1.00</h2>
+              <h2>₹1.00</h2>
             </div>
 
             <div className="summary">
               <div className="income card">
                 <h4>Income</h4>
-                <p>$0.00</p>
+                <p>₹0.00</p>
               </div>
               <div className="expenses card">
                 <h4>Expenses</h4>
-                <p>$0.00</p>
+                <p>₹0.00</p>
               </div>
             </div>
           </div>
-          <form className="add-transaction">
+          <form className="add-transaction" onSubmit={onSubmit}>
             <input type="text" placeholder="Description" required />
             <input type="number" placeholder="Amount" required />
             <input type="radio" id="expense" value="expense" />
@@ -34,6 +47,7 @@ export const ExpenceTracker = () => {
           </form>
         </div>
       </div>
+      <div className="transactions"></div>
     </>
   );
 };
