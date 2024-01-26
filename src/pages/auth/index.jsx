@@ -22,8 +22,10 @@ export const Auth = () => {
 
   return (
     <div className="login-page">
-      <div className="logo"> Pocket Flow</div>
-      <img src={pocketFlowSvg} alt="Pocket Flow Logo" className="logo-svg" />
+      <div className="logoandsvg">
+        <div className="logo"> Pocket Flow</div>
+        <img src={pocketFlowSvg} alt="Pocket Flow Logo" className="logo-svg" />
+      </div>
       <p>Sign In With Google to Continue...</p>
 
       <button className="login-with-google-btn" onClick={SignInWithGoogle}>

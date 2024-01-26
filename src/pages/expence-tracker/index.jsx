@@ -5,19 +5,21 @@ export const ExpenceTracker = () => {
       <div className="expense-tracker">
         <div className="container">
           <h1>Expense Tracker</h1>
-          <div className="balance card">
-            <h3>Your Balance</h3>
-            <h2>$1.00</h2>
-          </div>
-
-          <div className="summary">
-            <div className="income card">
-              <h4>Income</h4>
-              <p>$0.00</p>
+          <div className="cards">
+            <div className="balance card">
+              <h3>Your Balance</h3>
+              <h2>$1.00</h2>
             </div>
-            <div className="expenses card">
-              <h4>Expenses</h4>
-              <p>$0.00</p>
+
+            <div className="summary">
+              <div className="income card">
+                <h4>Income</h4>
+                <p>$0.00</p>
+              </div>
+              <div className="expenses card">
+                <h4>Expenses</h4>
+                <p>$0.00</p>
+              </div>
             </div>
           </div>
           <form className="add-transaction">

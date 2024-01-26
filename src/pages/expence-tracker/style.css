@@ -30,14 +30,20 @@ body {
   align-items: center;
 }
 
-.balance,
+/* .balance, */
 .summary {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+.cards {
+  display: flex;
+}
+
 .card {
+  /* display: flex; */
+  align-items: center;
   background-color: var(--yellow);
   border: 2px solid #000000;
   border-radius: 10px;
@@ -118,10 +124,11 @@ body {
 .add-transaction input,
 .add-transaction button,
 .add-transaction label {
-  margin: 8px;
-  padding: 10px;
-  border: 1px solid #ddd;
+  margin: 5px;
+  padding: 8px;
+  border: 2px solid black;
   border-radius: 5px;
+  background-color: var(--grey);
 }
 
 .add-transaction input[type="text"],
@@ -134,11 +141,13 @@ body {
 }
 
 .add-transaction button {
-  background-color: var(--purple);
-  color: var(--white);
+  background-color: var(--blue);
+  color: var(--black);
+  font-weight: 700;
+  border: 2px solid var(--black);
   cursor: pointer;
 }
 
 .add-transaction button:hover {
-  background-color: var(--pink);
+  background-color: var(--white);
 }

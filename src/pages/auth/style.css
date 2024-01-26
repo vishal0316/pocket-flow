@@ -18,6 +18,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.logoandsvg {
+  position: relative;
+}
+
 .logo {
   position: relative;
   text-transform: uppercase;
@@ -35,8 +39,8 @@ body {
 .logo-svg {
   max-width: 14rem;
   position: absolute;
-  top: 53px;
-  right: 37rem;
+  top: -34%;
+  right: 22%;
   z-index: 2;
 }
 
