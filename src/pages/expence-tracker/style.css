@@ -44,10 +44,12 @@ body {
 .card {
   /* display: flex; */
   align-items: center;
+  /* height: 16vh;
+  width: 24vw; */
   background-color: var(--yellow);
   border: 2px solid #000000;
   border-radius: 10px;
-  padding: 10px;
+  padding: 17px;
   margin: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.4);
 }
@@ -70,47 +72,83 @@ body {
   margin-left: 10px;
 }
 
+/* ... Your existing styles ... */
+
 .profile {
+  position: fixed;
+  top: 10px;
+  right: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 200px;
+  z-index: 1000; /* Ensure the profile stays above other elements */
 }
 
 .profile-photo {
-  width: 200px;
+  width: 50px; /* Adjust the size of the profile photo for mobile */
   border-radius: 50%;
 }
 
 .sign-out-button {
+  margin-top: 10px; /* Reduce the top margin for better spacing */
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  .profile {
+    top: 10px;
+    right: 10px;
+    align-items: flex-end; /* Align items to the right in mobile view */
+  }
+
+  .profile-photo {
+    width: 30px; /* Adjust the size of the profile photo for smaller screens */
+  }
+
+  .sign-out-button {
+    margin-top: 5px; /* Reduce the top margin for better spacing on smaller screens */
+    font-size: 14px; /* Adjust the font size for better readability on smaller screens */
+  }
+}
+
+.sign-out-button {
   border: none;
-  margin-top: 50px;
-  width: 150px;
-  background: #3498db;
-  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  /* margin-top: 50px; */
+  width: 100px;
+  background: var(--purple);
+
   border-radius: 10px;
   color: #ffffff;
-  font-size: 22px;
+  font-size: 15px;
   font-weight: bold;
-  padding: 10px 20px 10px 20px;
+  padding: 5px 10px;
   text-decoration: none;
 }
 
 .sign-out-button:hover {
-  background: #3cb0fd;
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background: var(--grey);
+  color: #000000;
   text-decoration: none;
   cursor: pointer;
 }
 
 .transactions {
-  margin-left: 430px;
+  margin-left: 400px;
   margin-top: 20px;
   padding-left: 10px;
   width: 600px;
   height: 400px;
   overflow: auto;
   border: 3px solid #023047;
+  background-color: var(--pink);
+}
+
+@media (max-width: 768px) {
+  .transactions {
+    margin-left: 20px; /* Adjust the left margin for smaller screens */
+    margin-top: 20px;
+    width: calc(100% - 40px); /* Full width with some padding on both sides */
+  }
 }
 
 .add-transaction {
@@ -132,14 +170,13 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* .add-transaction input[type="radio"] {
-  background-color: #2a2a2a;
-  border: 2px solid black;
-} */
+.add-transaction label {
+  margin-right: 10px; /* Add more margin to the label if needed */
+}
 
 .add-transaction input[type="text"],
 .add-transaction input[type="number"] {
-  width: 200px;
+  width: 150px;
 }
 
 .add-transaction label {
