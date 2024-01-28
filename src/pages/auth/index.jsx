@@ -19,7 +19,7 @@ export const Auth = () => {
       isAuth: true,
     };
     localStorage.setItem("auth", JSON.stringify(authInfo));
-    navigate("/expence-tracker");
+    navigate("/expense-tracker");
   };
 
   if (isAuth) {

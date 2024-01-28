@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Auth } from "./pages/auth/index";
-import { ExpenceTracker } from "./pages/expence-tracker/index";
+import { ExpenseTracker } from "./pages/expense-tracker/";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Auth />} />
-          <Route path="/expense-tracker" element={<ExpenceTracker />} />
+          <Route path="/expense-tracker" element={<ExpenseTracker />} />
         </Routes>
       </Router>
     </div>

@@ -1,13 +1,14 @@
-import "./style.css";
 import { useState } from "react";
+import { signOut } from "firebase/auth";
 import { useAddTransaction } from "../../hooks/useAddTransaction";
 import { useGetTransactions } from "../../hooks/useGetTransactions";
 import { useGetUserInfo } from "../../hooks/useGetUserInfo";
 import { useNavigate } from "react-router-dom";
-import { signOut } from "firebase/auth";
+
+import "./style.css";
 import { auth } from "../../config/firebase-config";
 
-export const ExpenceTracker = () => {
+export const ExpenseTracker = () => {
   const { addTransaction } = useAddTransaction();
   const { transactions, transactionTotals } = useGetTransactions();
   const { name, profilePhoto } = useGetUserInfo();
@@ -40,6 +41,7 @@ export const ExpenceTracker = () => {
       console.error(err);
     }
   };
+
   return (
     <>
       <div className="expense-tracker">
@@ -108,14 +110,14 @@ export const ExpenceTracker = () => {
         )}
       </div>
       <div className="transactions">
-        <h3>Transactions</h3>
+        <h3> Transactions</h3>
         <ul>
           {transactions.map((transaction) => {
             const { description, transactionAmount, transactionType } =
               transaction;
             return (
               <li>
-                <h4>{description}</h4>
+                <h4> {description} </h4>
                 <p>
                   ₹{transactionAmount} •{" "}
                   <label
