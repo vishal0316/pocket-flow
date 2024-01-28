@@ -9,13 +9,16 @@ import { auth } from "../../config/firebase-config";
 
 export const ExpenceTracker = () => {
   const { addTransaction } = useAddTransaction();
-  const { transactions } = useGetTransactions();
+  const { transactions, transactionTotals } = useGetTransactions();
+
   const { name, profilePhoto } = useGetUserInfo();
   const navigate = useNavigate();
 
   const [description, setDescription] = useState("");
   const [transactionAmount, setTransactionAmount] = useState(0);
   const [transactionType, setTransactionType] = useState("expense");
+
+  const { balance, income, expenses } = transactionTotals;
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -24,6 +27,9 @@ export const ExpenceTracker = () => {
       transactionAmount,
       transactionType,
     });
+
+    setDescription("");
+    setTransactionAmount("");
   };
 
   const signUserOut = async () => {
@@ -43,17 +49,17 @@ export const ExpenceTracker = () => {
           <div className="cards">
             <div className="balance card">
               <h3>Your Balance</h3>
-              <h2>₹1.00</h2>
+              {balance >= 0 ? <h2> ₹{balance}</h2> : <h2> -₹{balance * -1}</h2>}
             </div>
 
             <div className="summary">
               <div className="income card">
                 <h4>Income</h4>
-                <p>₹0.00</p>
+                <p>₹{income}</p>
               </div>
               <div className="expenses card">
                 <h4>Expenses</h4>
-                <p>₹0.00</p>
+                <p>₹{expenses}</p>
               </div>
             </div>
           </div>
