@@ -56,6 +56,27 @@ body {
 }
 /* #219ebc */
 
+@media (max-width: 768px) {
+  .logo {
+    padding: 2rem 1.5rem; /* Adjust padding for smaller screens */
+    font-size: 1.5rem;
+  }
+
+  .logo-svg {
+    max-width: 10rem;
+    top: -32%;
+    right: 18%;
+  }
+
+  .login-page p {
+    font-size: 30px;
+  }
+
+  .login-with-google-btn {
+    font-size: 20px;
+  }
+}
+
 .login-page p {
   font-size: 50px;
   font-weight: bold;

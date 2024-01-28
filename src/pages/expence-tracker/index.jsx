@@ -10,7 +10,6 @@ import { auth } from "../../config/firebase-config";
 export const ExpenceTracker = () => {
   const { addTransaction } = useAddTransaction();
   const { transactions, transactionTotals } = useGetTransactions();
-
   const { name, profilePhoto } = useGetUserInfo();
   const navigate = useNavigate();
 
