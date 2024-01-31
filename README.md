@@ -10,7 +10,7 @@ Pocket Flow is a simple and efficient expense tracker built using React and Fire
 
 ## Live Demo
 
-Check out the live demo of Pocket Flow [here](https://pocketflow-23b77.web.app/).
+Check out the live demo of Pocket Flow <a href="https://pocketflow-23b77.web.app/" target="_blank">here</a>.
 
 ## Technologies Used
 
